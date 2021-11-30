@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+.main-header>nav {
+    background: dodgerblue !important;
+}
+
+.main-header {
+    box-shadow: 0 3px 3px white;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.kashkart {
+    font-family: 'Monoton', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px whitesmoke;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+.cart-info {
+    font-weight: 600;
+    font-size: 2rem !important;
+    padding: .3rem;
+    color: white;
+    background:inherit;
+}
+
+.item-counter {
+    background: orange;
+    color: white;
+    padding: .1rem;
+    top: 10%;
+    right: -10%;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    font-size: .8rem;
+    line-height: 1.2;
+    border-radius: 100%;
+}
+
+.tab-links {
+    list-style-type: none;
+    border-bottom: 2px solid gray;
+}
+
+.tab-links>li {
+    display: inline-block;
+}
+
+.tab-links>li>a {
+    padding: 0 1rem 0 0;
+    display: block;
+    color: rgba(0, 0, 0, .7);
+    font-size: 1.1rem;
+    position: relative;
+    font-family: Helvetica, sans-serif;
+    transition: all  300ms;
+}
+
+.tab-links>li>a::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: rgba(0, 0, 0, .7);
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.tab-links>li>a:hover {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.tab-links>.active>a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.tab-links>.active>a::after {
+    display: block;
+    width: 50%;
+    background: dodgerblue;
+}
+
+.tab-links>li>a:hover::after {
+    display: block;
+    background: dodgerblue;
+    width: 50%;
+    animation: width_animation 300ms;
+}
+
+@-webkit-keyframes width_animation {
+    from {width: 0%}
+    to {width: 50%}
+}
+
+@-moz-keyframes width_animation {
+    from {width: 0%}
+    to {width: 50%}
+}
+
+@-o-keyframes width_animation {
+    from {width: 0%}
+    to {width: 50%}
+}
+
+@keyframes width_animation {
+    from {width: 0%}
+    to {width: 50%}
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card>.item-image {
+    overflow: hidden;
+    border: 1px solid dodgerblue;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.card>.item-image>img {
+    transition: transform 300ms ease-in;
+
+}
+
+.card:hover>.item-image>img {
+    transform: scale(1.1);
+}
+
+.purchase-link {
+    background: white;
+    color: dodgerblue;
+    font-size: 1.1rem;
+    padding: .5rem 2rem;
+    font-weight: 600;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border: 1px solid dodgerblue;
+    transition: color 300ms, font-weight 300ms, background-color 300ms;
+}
+
+.purchase-link:hover {
+    background-color: rgb(45, 123, 202);
+    color: white;
+}
+
+.list-item {
+    border: 2px solid rgb(224, 224, 224);
+    border-radius: 5px;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.card-text {
+    font-size: .8rem;
+    border-left: 1px solid dodgerblue;
+    border-right: 1px solid dodgerblue;
+}
+
+.card-body>p {
+    height: 4rem;
+
+}
+
+.pricing {
+    background: dodgerblue;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.pricing>p {
+    flex: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.add-cart {
+    bottom: 0;
+    width: 3rem;
+    height: 3rem;
+    right: 0;
+    background: dodgerblue;
+    border: none;
+    border-top-left-radius: 3px;
+    padding: .3rem .5rem;
+    color: white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    display: none;
+}
+
+.add-cart > i {
+    font-size: 1.2rem;
+}
+
+.add-cart > i:hover {
+    color: orange;
+}
+
+.add-cart:hover {
+    background-color: rgb(45, 123, 202);
+}
+
+.add-cart:focus{
+    outline: none;
+}
+
+.card:hover>.item-image>.add-cart {
+    display: block;
+    animation: display_cart 500ms;
+}
+
+
+@-webkit-keyframes display_cart {
+    from {width: 0; 
+        height: 0;}
+    to {width: 3rem;
+        height: 3rem;}
+}
+
+@-moz-keyframes display_cart {
+    from {width: 0; 
+        height: 0;}
+    to {width: 3rem;
+        height: 3rem;}
+}
+
+@-o-keyframes display_cart {
+    from {width: 0; 
+        height: 0}
+    to {width: 3rem;
+        height: 3rem;}
+}
+
+@keyframes display_cart {
+    from {width: 0; 
+        height: 0;}
+    to {width: 3rem;
+        height: 3rem;}
+}
+
+.cart {
+    top: 110%;
+    right: -16.5%;
+    overflow: hidden;
+    border-bottom: 3px solid dodgerblue;
+    background: white;
+    width: 25vw;
+    display: none;
+}
+
+.cart-image {
+    width: 40px;
+    height: 40px;
+}
+
+.cart-items {
+    list-style-type: none;
+}
+
+.cart-item {
+    margin: 1rem 0;
+
+}
+
+.cart-item>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-total {
+    background: gray;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-checkout {
+    border: none;
+    background: dodgerblue;
+    color:white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+
+}
+
+.btn-checkout>i {
+    margin-left: 1rem;
+    font-size:1rem;
+}
+
+.btn-checkout:hover {
+    color: dodgerblue;
+    background: white;
+    
+}
+
+.btn-checkout:hover>i {
+    animation: arrow_movement 700ms;
+}
+
+@-webkit-keyframes arrow_movement {
+    0% {margin-left:1rem}
+    50% {margin-left:1.5rem}
+    100% {margin-left:1rem}
+}
+
+@-moz-keyframes arrow_movement {
+    0% {margin-left:1rem}
+    50% {margin-left:1.5rem}
+    100% {margin-left:1rem}
+}
+
+@-o-keyframes arrow_movement {
+    0% {margin-left:1rem}
+    50% {margin-left:1.5rem}
+    100% {margin-left:1rem}
+}
+
+@keyframes arrow_movement {
+    0% {margin-left:1rem}
+    50% {margin-left:1.5rem}
+    100% {margin-left:1rem}
+}
+
+.cart-item-remove {
+    border: none;
+    background: white;
+}
+
+.cart-item-remove:focus {
+    outline: none;
+}
+
+.read-more:hover,
+.read-more:active {
+    color: black !important;
+}
+
+.creator-info>img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid dodgerblue;
+}
+
+@media only screen and (max-width: 576px) {
+
+    .creator-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .creator-info > img {
+        width: 250px;
+        height: 250px;
+        display: block;
+    }
+
+    .creator-info > p {
+        text-align: justify;
+    }
+}
